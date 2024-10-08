@@ -1,0 +1,266 @@
+/* General Styles for All Screens */
+
+.App {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family:"lucida handwriting"; 
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.App-nav {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: black;
+  max-width: 1000px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  margin-top: 10px;
+  background-color: cream;
+  border-radius: 10px;
+}
+
+.App-nav nav {
+  display: flex;
+  border: 5px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.App-nav nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  font-size: 35px;
+  text-align: center;
+  background-color: #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.App-nav nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.App-nav nav ul li a {
+  display: inline-block;
+  text-decoration: underline;
+  color: #007bff;
+  font-size: 25px;
+  padding: 10px 10px 5px 10px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  text-align: center;
+  margin: 5px auto;
+  border-radius: 5px;
+}
+
+.App-nav nav ul li a:hover {
+  color: #007bff;
+  box-shadow: 0 2px 5px rgba(6, 8, 158, 0.3);
+  text-align: center;
+  margin: 5px auto;
+  backdrop-filter: blur(10px);
+}
+
+.App-nav nav ul li p {
+  font-size: 20px;
+  color: black;
+  margin-top: 10px;
+  max-width: 800px;
+  text-align: left;
+  margin: 10px auto;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.App-nav .monoalphabetic-container,
+.App-nav .polyalphabetic-container,
+.App-nav .playfair-container,
+.App-nav .hillcipher-container,
+.App-nav .caesarcipher-container {
+  background-color: #fff;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.App input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Navbar Base Styling */
+.navbar {
+  background-color: #333; /* Dark background for the navbar */
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between; /* Aligns h1 to the left and li to the right */
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for h1 in the App class */
+
+.navbar .App {
+  margin-right: auto;
+}
+
+.navbar .App h1 {
+  font-family: 'Lucida Handwriting', cursive;
+  font-size: 28px;
+  margin: 0;
+  justify-content: flex-start;
+  align-items: left;
+  color: #fff;
+}
+
+/* Styling for the nav and ul */
+.navbar nav {
+  flex-grow: 1;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end; /* Aligns the list items to the right */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar nav ul li {
+  margin: 0 15px;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+  background-color: #007bff; /* Change background on hover */
+  color: #fff;
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .App h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .App-nav nav ul {
+    font-size: 28px;
+  }
+
+  .App-nav nav ul li a {
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  .App-nav nav ul li p {
+    font-size: 18px;
+    margin-top: 8px;
+  }
+
+  .App-nav .monoalphabetic-container,
+  .App-nav .polyalphabetic-container,
+  .App-nav .playfair-container,
+  .App-nav .hillcipher-container,
+  .App-nav .caesarcipher-container {
+    max-width: 500px;
+  }
+
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  .App {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .App h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .App-nav nav ul {
+    font-size: 20px;
+  }
+
+  .App-nav nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .App-nav nav ul li a {
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .App-nav nav ul li p {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+
+  .App-nav .monoalphabetic-container,
+  .App-nav .polyalphabetic-container,
+  .App-nav .playfair-container,
+  .App-nav .hillcipher-container,
+  .App-nav .caesarcipher-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .App input {
+    font-size: 14px;
+  }
+
+}
